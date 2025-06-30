@@ -1,0 +1,63 @@
+{
+  "name": "nexus-code",
+  "displayName": "Nexus Code",
+  "description": "The ultimate AI coding companion powered by Gemini Studio.",
+  "version": "0.0.1",
+  "publisher": "Axon-app",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "AI",
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nexus-code.helloWorld",
+        "title": "Hello Nexus Code"
+      },
+      {
+        "command": "nexus-code.captureContext",
+        "title": "Nexus Code: Capture Context"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "@types/chai": "^4.3.7",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Axon-app/nexus-code.git"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+out/
+.vscode/
+.env
+.vscode-test/
+.vscode-test/**
+.vsc-extension.js
+.DS_Store
